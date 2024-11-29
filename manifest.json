@@ -1,0 +1,72 @@
+{
+    "manifest_version": 3,
+    "name": "Opal Benutzereingabe Automatisierung",
+    "version": "1.0.0",
+    "description": "Automatische Eingabe der Benutzerdaten",
+    "icons": {
+        "16": "icons/icon1.png",
+        "48": "icons/icon1.png",
+        "128": "icons/icon1.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service-worker": "background.js"
+    },
+    "host_permissions": [
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e1s2",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e2s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e3s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e4s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e5s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e6s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e7s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e8s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e9s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e10s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e11s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e12s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e13s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e14s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e15s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e16s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e17s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e18s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e19s1",
+        "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e20s1"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e1s2",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e2s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e3s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e4s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e5s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e6s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e7s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e8s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e9s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e10s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e11s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e12s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e13s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e14s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e15s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e16s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e17s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e18s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e19s1",
+                "https://idp.tu-dresden.de/idp/profile/SAML2/Redirect/SSO?execution=e20s1"
+            ],       
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon1.png"
+    }
+}

@@ -1,4 +1,4 @@
-# Opal_UserPw_Web-Extension
+# OpalPw_Web-Extension
 Web-Erweiterung, welche die Eingabe der 2FA automatisiert (Tokenmethode: Indexed Secret)
 
 # Voraussetzungen:
